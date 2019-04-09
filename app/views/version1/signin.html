@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>
-        COP Advanced Passenger Information Service - Proof of concept
+        COP Advanced Passenger Information Service
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#0b0c0c">
@@ -43,12 +43,6 @@
                     </span>
                 </a>
             </div>
-            <div class="govuk-header__content">
-                <a href="/index.html" class="govuk-header__link govuk-header__link--service-name">
-                    COP Advanced Passenger Information Service - Proof of concept
-                </a>
-                <button type="button" role="button" class="govuk-header__menu-button js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
-            </div>
         </div>
     </header>
     <div class="govuk-width-container">
@@ -63,168 +57,49 @@
             </p>
         </div>
         <main class="govuk-main-wrapper " id="main-content" role="main">
-            <style type="text/css">
-            table {
-                border-bottom-width: 0;
-                margin-bottom: 2em;
-            }
-
-            table td,
-            table th {
-                border-bottom: none;
-            }
-
-            h3.govuk-heading-m {
-                margin-top: 0;
-            }
-
-            section {
-                margin-bottom: 2em;
-                padding: 1em 0;
-            }
-
-            section.heading-xlarge {
-                margin-bottom: 0.5em;
-            }
-
-            section div.govuk-grid-row {
-                padding: 20px 10px;
-            }
-
-            section div.govuk-grid-row:nth-child(1) {
-                background-color: #005ea5;
-            }
-
-            section div.govuk-grid-row:nth-child(1) table,
-            section div.govuk-grid-row:nth-child(1) ul,
-            section div.govuk-grid-row:nth-child(1) h2,
-            section div.govuk-grid-row:nth-child(1) a {
-                color: #FFF;
-            }
-
-            section div.govuk-grid-row:nth-child(1) .govuk-table__header,
-            .govuk-table__cell {
-                border: none;
-            }
-
-            h4.heading-small:first-child {
-                margin-top: 0;
-            }
-
-            tbody {
-                vertical-align: top;
-            }
-
-            /* ul {} */
-
-            /* ul li {
-        font-weight: bold;
-    } */
-
-            ul li ul {
-                font-weight: normal;
-                /* margin-left: 1em;*/
-                margin-bottom: 1em;
-            }
-
-            /* ul li ul li {
-        font-weight: bold;
-    } */
-
-            /* ul li ul li ul {
-            margin: 1em 0 1em 1em;
-        } */
-
-            ul li ul li ul li {
-                font-weight: normal;
-            }
-            </style>
             <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    <h1 class="govuk-heading-l">
-                        Prototypes and design iterations for the 'COP Advanced Passenger Information Service'
-                        <span class="govuk-caption-xl">Prototype kit v8.9.0</span>
-                    </h1>
-                    <script>
-                    console.log("v8.8.0");
-                    </script>
-                </div>
-            </div>
-            <section id="version1">
-                <div class="govuk-grid-row testing">
-                    <div class="govuk-grid-column-one-third">
-                        <h2 class="govuk-heading-l" style="margin-bottom: 0;">Version 1</h2>
-                        <br>
-                        <p><a class="govuk-link" href="/version1/start.html">View the prototype</a></p>
-                    </div>
-                    <div class="govuk-grid-column-two-thirds">
-                        <table class="govuk-table">
-                            <thead class="govuk-table__head">
-                                <tr class="govuk-table__row">
-                                    <th class="govuk-table__header" scope="col">Tested on</th>
-                                    <th class="govuk-table__header" scope="col">Tested at</th>
-                                </tr>
-                            </thead>
-                            <tbody class="govuk-table__body">
-                                <tr class="govuk-table__row">
-                                    <td class="govuk-table__cell">
-                                        <ul class="govuk-list">
-                                            <li>XXXX</li>
-                                            <li>XXXX</li>
-                                        </ul>
-                                    </td>
-                                    <td class="govuk-table__cell">
-                                        <ul class="govuk-list">
-                                            <li>YYYY</li>
-                                            <li>YYYY</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="govuk-grid-row features">
-                    <div class="govuk-grid-column-one-third">
-                        <h3 class="govuk-heading-m">New features</h3>
-                    </div>
-                    <div class="govuk-grid-column-two-thirds">
-                        <h4 class="govuk-heading-s">Initial build of the prototype</h4>
-                        <ul class="govuk-list">
-                            <li><a href="/version1/start.html">Start (Service start page)</a>
-                                <ul>
-                                    <li><a href="/version1/signin.html">Sign in (Keycloak theme mockup & admin login)</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>Homepage
-                                <ul>
-                                    <li><a href="/version1/home.html">Homepage</a></li>
-                                </ul>
-                    </div>
-                </div>
-                <div class="govuk-grid-row enhancements">
-                    <div class="govuk-grid-column-one-third">
-                        <h3 class="govuk-heading-m">Enhancements</h3>
-                    </div>
-                    <div class="govuk-grid-column-two-thirds">
-                        <h4 class="govuk-heading-s">Start page</h4>
-                        <ul class="govuk-list govuk-list--bullet">
-                            <li>Included to model the user journey from start to finish, in line with what GDS would expect during an assessment</li>
-                        </ul>
-                        <h4 class="govuk-heading-s">Sign In</h4>
-                        <ul class="govuk-list govuk-list--bullet">
-                            <li>Functionality to enable sign in via Keycloak SSO as well as a "hidden" sign in section for administrators (non-POISE SSO)</li>
-                        </ul>
-                        <h4 class="govuk-heading-s">Miscellaneous</h4>
-                        <ul class="govuk-list govuk-list--bullet">
-                            <li>Initial set of core pages created</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+                <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-xl">Sign in</h1>
+                    <a href="/version1/home.html" role="button" draggable="false" class="govuk-button">Sign in</a>
+                    <details class="govuk-details">
+                        <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                                Administrator login
+                            </span>
+                        </summary>
+                        <div class="govuk-details">
+                            <div class="govuk-grid-column-two-thirds">
+                                <form action="/index.html">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-label--m" for="username">
+                                            Username
+                                        </label>
+                                        <span id="username-hint" class="govuk-hint">
+                                            Enter your username
+                                        </span>
+                                        <input class="govuk-input" id="emailAddress" name="emailAddress" type="text">
+                                    </div>
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-label--m" for="emailAddress">
+                                            Password
+                                        </label>
+                                        <span id="password-hint" class="govuk-hint">
+                                            Enter your password
+                                        </span>
+                                        <input class="govuk-input" id="emailAddress" name="emailAddress" type="text">
+                                    </div>
+                                    <button type="submit" class="govuk-button">
+                                        Sign in
+                                    </button>
+                                </form>
+                                <!-- </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds"> -->
+                            </div>
+                        </div>
+                    </details>
         </main>
-    </div>
     </div>
     <footer class="govuk-footer " role="contentinfo">
         <div class="govuk-width-container ">
@@ -263,7 +138,7 @@
     <script src="/public/javascripts/table-multiselect.js"></script>
     <script src="/public/javascripts/application.js"></script>
     <script src="/public/javascripts/auto-store-data.js"></script>
-    <!-- GOV.UK Prototype Kit v8.8.0 -->
+    <!-- GOV.UK Prototype Kit v8.3.0 -->
 </body>
 
 </html>
