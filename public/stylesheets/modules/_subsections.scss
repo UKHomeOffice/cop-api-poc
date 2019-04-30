@@ -1,0 +1,168 @@
+// Topic subsections
+// Fallback styles first, for when JS is disabled
+
+// Here we're using BEM which uses __ to denote an element within a block
+// scss-lint:disable SelectorFormat
+
+.subsection {
+
+  &__title {
+    @include bold-24;
+    margin-bottom: 5px;
+  }
+
+  &__description {
+    @include core-19;
+    margin-bottom: $gutter-one-quarter;
+
+    @include media(tablet) {
+      margin-bottom: $gutter-half;
+    }
+  }
+
+  &__list {
+    @include core-19;
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  &__list-item {
+    margin-bottom: 0.5em;
+  }
+
+  &__list-item a {
+    text-decoration: none;
+  }
+}
+
+
+ // When JavaScript is enabled, create accordion
+.js-accordion-with-descriptions {
+
+  // Wrapper for 'open all / close all' button
+  .subsection-controls {
+    @extend %contain-floats;
+
+    button {
+      float: right;
+
+      @include core-16;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: $link-colour;
+      padding: 0.5em 0;
+    }
+  }
+
+  // Wrapper for subsections
+  .subsection-wrapper {
+    @extend %contain-floats;
+  }
+
+  .subsection {
+    margin-bottom: 0;
+
+    @include media(tablet) {
+      margin-bottom: 0;
+    }
+
+    &__header {
+      color: $govuk-blue;
+      position: relative;
+    }
+
+    &__title {
+      border-top: 1px solid $border-colour;
+      margin-bottom: 0;
+      padding-bottom: 0.65em;
+      padding-top: 0.65em;
+
+      // Change the background of the header on hover
+      &:hover {
+        cursor: pointer;
+        background: $highlight-colour;
+      }
+
+      button {
+        // scss-lint:disable PlaceholderInExtend
+        // scss-lint:disable BangFormat
+        @extend .govuk-\!-font-size-24;
+        // scss-lint:enable PlaceholderInExtend
+        // scss-lint:enable BangFormat
+
+        background: none;
+        border: 0;
+        color: $govuk-blue;
+        cursor: pointer;
+        font-weight: bold;
+        margin: 0;
+        padding: 0.25em 0 0 0;
+        text-align: left;
+      }
+    }
+
+    &__description {
+      margin-bottom: 0;
+      margin-right: $gutter-half;
+
+      @include media(tablet) {
+        margin-bottom: 0;
+        margin-right: $gutter;
+      }
+    }
+
+    &__icon {
+      height: 16px;
+      position: absolute;
+      margin-top: -8px;
+      right: 30px;
+      top: 50%;
+      width: 16px;
+      // scss-lint:disable DuplicateProperty
+      // PNG fallback for SVG
+      background-image: image-url('icons-plus-minus.png');
+      // SVG sprite
+      background-image: image-url("icons-plus-minus.svg");
+      // scss-lint:enable DuplicateProperty
+      background-repeat: no-repeat;
+      background-position: 0 -16px;
+    }
+
+    &--is-open {
+      .subsection__icon {
+        background-position: 0 0;
+      }
+    }
+
+    &__content {
+      padding-top: 5px;
+      padding-bottom: $gutter-half;
+    }
+
+    &--is-open {
+      .subsection__content {
+        @include media(tablet) {
+          padding-top: 10px;
+          padding-bottom: $gutter;
+        }
+      }
+    }
+  }
+}
+
+.subsection__title a {
+  @include bold-19;
+  background: none;
+  border: 0;
+  display: block;
+  margin-bottom: 0;
+  padding: 14px 0 12px 0;
+  text-align: left;
+  text-decoration: none;
+}
+
+.register-show.js-enabled main {
+  padding-bottom: 0 !important;
+  margin-bottom: 90px !important;
+}
