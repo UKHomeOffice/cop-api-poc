@@ -1,0 +1,110 @@
+
+
+// ----------------------------------------------------------------------------
+// Register data table for showing the contents of a register
+// ----------------------------------------------------------------------------
+
+.table {
+  margin-bottom: $gutter;
+
+  .panel {
+    margin: $gutter 0;
+  }
+
+  td {
+    &:last-child {
+      padding-right: 15px;
+    }
+  }
+}
+
+.table-scroll {
+  margin-bottom: $gutter;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.register-data-table {
+  th,
+  td {
+    font-size: 16px;
+    padding: 15px;
+    vertical-align: top;
+
+    a {
+      white-space: nowrap;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  th {
+    background-color: $grey-3;
+    border-bottom: 0;
+    border-right: 2px solid $white;
+    font-weight: normal;
+    min-width: 280px;
+    position: relative;
+    vertical-align: middle;
+
+    &.start-date,
+    &.end-date,
+    &.review-date,
+    &:first-child {
+      min-width: 120px;
+    }
+  }
+
+  td {
+    border: none;
+  }
+
+  tr:nth-child(even) td {
+    background: $grey-4;
+  }
+
+  .table-header {
+    &.active {
+      background-color: $govuk-blue;
+      color: $white;
+      font-weight: bold;
+    }
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Secondary table type used for showing example fields
+// ----------------------------------------------------------------------------
+.registers-secondary-table {
+  p {
+    margin: 0;
+  }
+}
+
+.registers-secondary-table__caption {
+  font-weight: normal;
+  padding: 0 0 1em 0;
+}
+
+.registers-secondary-table__row {
+  border: 1px solid $govuk-border-colour;
+}
+
+.registers-secondary-table__header,
+.registers-secondary-table__cell {
+  background: govuk-colour("grey-4");
+  font-size: 16px;
+  padding: 0;
+  vertical-align: top;
+
+  &:last-child {
+    padding-right: 0;
+    width: 66%;
+  }
+}
+
+.registers-secondary-table__header {
+  background: govuk-colour("grey-3");
+}
